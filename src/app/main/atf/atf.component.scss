@@ -1,10 +1,29 @@
-@import "./../../styles.scss";
+@import "./../../../styles/styles.scss";
 
 .atf-section {
     height: 100vh;
     padding: $component-padding;
     box-sizing: border-box;
-    background: linear-gradient(rgb(255, 255, 255), rgb(234, 240, 255));
+    background: linear-gradient(rgb(255, 255, 255), rgb(233, 239, 255));
+}
+
+.circle {
+    position: absolute;
+    top: -80px;
+    left: -100px;
+    width: 600px;
+    height: 600px;
+    z-index: 150;
+}
+.logo {
+    z-index: 250;
+    display: flex;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 250px;
+    height: 250px;
+    filter: invert(1);
 }
 
 .headlines-container {
@@ -36,11 +55,27 @@
     position: absolute;
     bottom: 0;
     height: 80vh;
+    z-index: 200;
     > img {
-        width: 40%;
+        width: 30%;
         height: 90%;
         position: absolute;
         bottom: 0;
+        left: 90px;
+    }
+}
+
+.scroll-container {
+    @include flex-column;
+    position: absolute;
+    bottom: 0;
+    left: 60%;
+    font-family: $font-montserrat;
+    hr {
+        width: 2px;
+        height: 250px;
+        background-color: $primary-blue;
+        border: none;
     }
 }
 
@@ -50,13 +85,16 @@
     position: absolute;
     bottom: 60px;
     right: 90px;
+    z-index: 250;
+
     img {
         width: 35px;
         height: 35px;
         cursor: pointer;
+        transition: transform 0.125s ease;
 
-        // &:hover {
-
-        // }
+        &:hover {
+            transform: translateX(-15px);
+        }
     }
 }

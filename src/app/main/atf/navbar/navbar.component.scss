@@ -1,0 +1,21 @@
+@import "./../../../../styles/styles.scss";
+
+nav {
+    .nav-container {
+        @include flex-end;
+        top: 0;
+        padding: $component-padding-small;
+        box-sizing: border-box;
+        background-color: $bg-white;
+        gap: 32px;
+        font-family: $font-montserrat;
+        font-weight: 400;
+        a {
+            text-decoration: none;
+            color: $primary-blue;
+            &:hover {
+                font-weight: 700;
+            }
+        }
+    }
+}
