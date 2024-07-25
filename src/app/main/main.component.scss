@@ -1,0 +1,28 @@
+@import "./../../styles/styles.scss";
+
+.nav-bar-container {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    max-width: 1500px;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 100;
+}
+
+.nav-bar-component {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+}
+
+.atf-component {
+    position: relative;
+    height: 100vh;
+}
+
+.about-me-component {
+    position: relative;
+    height: 50vh;
+}
