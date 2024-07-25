@@ -1,0 +1,70 @@
+// @use "@angular/material" as mat;
+@import "./../styles/typography";
+@import "./../styles/mixins";
+
+// @include mat.core();
+
+// $blue-theme: mat.define-light-theme(
+//   (
+//     color: (
+//       primary: mat.define-palette(mat.$blue-palette),
+//       accent: mat.define-palette(mat.$light-blue-palette)
+//     )
+//   )
+// );
+
+// @include mat.all-component-themes($blue-theme);
+$component-padding-small: 50px 100px;
+$component-padding: 80px 100px;
+$container-padding: 35px 35px;
+
+$bg-white: white;
+$primary-blue: #5988ff;
+$dark-blue: #0043f0;
+
+$font-montserrat: "Montserrat", sans-serif;
+$font-baloo: "Baloo 2", sans-serif;
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  color: $primary-blue;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 11px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: $primary-blue;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $primary-blue;
+}
+::-webkit-scrollbar-thumb:active {
+  background: $primary-blue;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #ededed;
+}
+::-webkit-scrollbar-track:active {
+  background: #e3e3e3;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
