@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { AtfComponent } from './atf/atf.component';
+import { AtfComponent } from './main/atf/atf.component';
 
 @Component({
   selector: 'app-root',

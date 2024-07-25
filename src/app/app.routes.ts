@@ -1,4 +1,4 @@
 import { Routes } from '@angular/router';
-import { AtfComponent } from './atf/atf.component';
+import { MainComponent } from './main/main.component';
 
-export const routes: Routes = [{ path: '', component: AtfComponent }];
+export const routes: Routes = [{ path: '', component: MainComponent }];
