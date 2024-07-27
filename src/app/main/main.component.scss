@@ -3,7 +3,7 @@
 .nav-bar-container {
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100%;
     max-width: 1500px;
     display: flex;
     justify-content: flex-end;
@@ -18,11 +18,17 @@
 }
 
 .atf-component {
-    position: relative;
     height: 100vh;
 }
 
-.about-me-component {
-    position: relative;
+.about-me-component,
+.skill-set-component {
     height: 50vh;
+}
+
+.my-work-component,
+.about-me-component,
+.atf-component,
+.skill-set-component {
+    position: relative;
 }
