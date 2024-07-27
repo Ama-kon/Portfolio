@@ -1,0 +1,51 @@
+@import "./../../../styles/styles.scss";
+
+section {
+    background: $gardient-blue;
+    height: fit-content;
+    padding: $component-padding;
+    box-sizing: border-box;
+    @include flex-column;
+    align-items: center;
+}
+
+h2 {
+    font-family: $font-baloo;
+    font-weight: 600;
+    font-size: 96px;
+    color: white;
+    margin: 0px 0 42px 0;
+}
+
+.skill-set-container {
+    display: flex;
+    gap: 88px;
+    flex-wrap: wrap;
+    width: 65%;
+    justify-content: center;
+    .img-text-container {
+        @include flex-column;
+        align-items: center;
+        gap: 16px;
+        &:hover {
+            cursor: default;
+            .skill-icon {
+                transform: translateY(-15px);
+                transition: transform 125ms ease;
+            }
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+    .skill-icon {
+        width: 64px;
+        height: 64px;
+        transition: transform 125ms ease;
+    }
+    span {
+        color: white;
+        font-family: $font-montserrat;
+        font-size: 16px;
+    }
+}

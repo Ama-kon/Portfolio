@@ -1,0 +1,15 @@
+<section>
+  <h2>Skill Set</h2>
+  <div class="skill-set-container">
+    @for(skill of skills; track skill) {
+    <div class="img-text-container">
+      <img
+        class="skill-icon"
+        src="assets/img/skills-icons/{{ skill }}-icon.png"
+        alt="{{ skill }} icon"
+      />
+      <span> {{ skill }}</span>
+    </div>
+    }
+  </div>
+</section>
