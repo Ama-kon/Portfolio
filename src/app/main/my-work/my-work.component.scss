@@ -1,0 +1,17 @@
+@import "./../../../styles/styles.scss";
+
+section {
+    padding: $component-padding;
+    background: $bg-white;
+    .my-work-headline {
+        @include flex-column;
+        gap: 32px;
+    }
+    h2 {
+        @include h2-blue;
+        font-size: 80px;
+    }
+    span {
+        @include span-font-black;
+    }
+}
