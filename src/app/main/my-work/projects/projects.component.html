@@ -1,0 +1,24 @@
+<section>
+  @for (project of projects; track project) {
+  <div class="single-project-container">
+    <div class="img-container">
+      <img class="project-img" src=" {{ project.img }}" alt="" />
+    </div>
+    <div class="project-info-container">
+      <h2>{{ project.title }}</h2>
+      <span>{{ project.stack }}</span>
+      <span>{{ project.description }}</span>
+      <div class="buttons-container">
+        <button class="gradient-button">
+          <a href="{{ project.github }}">GitHub</a>
+        </button>
+        <button class="gradient-button">
+          <a href="{{ project.live }}">Live</a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  } @empty {
+  <span>Coming soon</span>span> }
+</section>
