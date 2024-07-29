@@ -17,10 +17,19 @@
     color: black;
 }
 
-@mixin h2-blue {
+@mixin h2 {
     font-family: $font-baloo;
     font-weight: 700;
     line-height: 90px;
+    margin: 0;
+    font-size: 64px;
+}
+
+@mixin h3 {
+    font-family: $font-baloo;
+    font-weight: 700;
+    line-height: 24px;
+    font-size: clamp(28px, 5vw, 48px);
     margin: 0;
 }
 
@@ -30,11 +39,11 @@
         border: 2px solid #5988ff;
         border-radius: 15px;
         padding: 10px 20px;
-
+        display: inline-block;
+        width: clamp(100px, 16vw, 250px);
         cursor: pointer;
         position: relative;
         overflow: hidden;
-        width: 250px;
         height: 56px;
     }
 
@@ -64,6 +73,7 @@
         transition: color 80ms ease-in-out;
         position: relative;
         z-index: 1;
+        display: block;
     }
 
     .gradient-button:hover a {
