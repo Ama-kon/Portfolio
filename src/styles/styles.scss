@@ -19,6 +19,8 @@ $component-padding-small: 50px 100px;
 $component-padding: 80px 100px;
 $container-padding: 35px 35px;
 
+$gap-40: 40px;
+
 $bg-white: white;
 $primary-blue: #5988ff;
 $dark-blue: #0043f0;
@@ -37,6 +39,8 @@ body {
   scroll-behavior: smooth;
   color: $primary-blue;
 }
+
+/************************************* SCROLL BAR *************************************/
 
 ::-webkit-scrollbar {
   width: 9px;
