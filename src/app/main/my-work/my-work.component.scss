@@ -6,10 +6,10 @@ section {
     .my-work-headline {
         @include flex-column;
         gap: 32px;
+        margin-bottom: 48px;
     }
     h2 {
-        @include h2-blue;
-        font-size: 80px;
+        @include h2;
     }
     span {
         @include span-font-black;

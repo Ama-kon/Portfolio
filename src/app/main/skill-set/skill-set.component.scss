@@ -7,14 +7,12 @@ section {
     box-sizing: border-box;
     @include flex-column;
     align-items: center;
+    gap: $gap-40;
 }
 
 h2 {
-    font-family: $font-baloo;
-    font-weight: 600;
-    font-size: 96px;
+    @include h2;
     color: white;
-    margin: 0px 0 42px 0;
 }
 
 .skill-set-container {

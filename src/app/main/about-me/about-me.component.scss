@@ -15,7 +15,7 @@ section {
         width: 50%;
     }
     h2 {
-        @include h2-blue;
+        @include h2;
         font-size: 100px;
     }
 }
@@ -62,4 +62,7 @@ section {
 
 .button-container {
     @include gradient-button;
+    > button {
+        min-width: 215px;
+    }
 }
