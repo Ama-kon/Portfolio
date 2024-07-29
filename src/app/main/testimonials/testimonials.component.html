@@ -1,0 +1,17 @@
+<section>
+  <div class="headline-container">
+    <h2>Need a teamplayer?</h2>
+    <span>People I've worked with have said some nice things...</span>
+  </div>
+  <div class="testimonials">
+    @for (testimonial of testimonials; track testimonial) {
+    <div class="single-testimonial">
+      <div class="name-title-container">
+        <span class="name">{{ testimonial.name }}</span>
+        <span class="project">{{ testimonial.project }}</span>
+      </div>
+      <span class="opinion">{{ testimonial.opinion }}</span>
+    </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,48 @@
+@import "./../../../styles/styles.scss";
+
+section {
+    background: $gardient-blue;
+    color: white;
+    padding: $component-padding;
+    @include flex-column;
+    gap: 8vh;
+}
+
+.headline-container {
+    @include flex-column;
+    align-items: center;
+    gap: $gap-40;
+    h2 {
+        @include h2;
+    }
+    span {
+        font-size: 24px;
+        font-family: $font-montserrat;
+    }
+}
+
+.testimonials {
+    display: flex;
+    gap: 10%;
+    .single-testimonial {
+        @include flex-column;
+        font-family: $font-montserrat;
+        width: 50%;
+        gap: $gap-40;
+        .name-title-container {
+            @include flex-column;
+        }
+        .name {
+            font-weight: 700;
+            font-size: 24px;
+        }
+        .project {
+            font-weight: 400;
+            font-size: 16px;
+        }
+        .opinion {
+            font-weight: 400;
+            font-size: 18px;
+        }
+    }
+}
