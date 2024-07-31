@@ -1,0 +1,30 @@
+@import "./../../../styles/styles.scss";
+
+section {
+    padding: $component-padding;
+    @include flex-column;
+    gap: $gap-40;
+    background: $gradient-white;
+    h2 {
+        @include h2;
+    }
+    .text-form-container {
+        display: flex;
+        width: 100%;
+        gap: $gap-40;
+    }
+}
+
+.contact-text {
+    width: 50%;
+    h3 {
+        @include h3;
+    }
+    .contact-me-text {
+        @include span-font-black;
+    }
+}
+
+.contact-form {
+    width: 50%;
+}
