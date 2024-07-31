@@ -1,19 +1,6 @@
-// @use "@angular/material" as mat;
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
 @import "./../styles/typography";
 @import "./../styles/mixins";
-
-// @include mat.core();
-
-// $blue-theme: mat.define-light-theme(
-//   (
-//     color: (
-//       primary: mat.define-palette(mat.$blue-palette),
-//       accent: mat.define-palette(mat.$light-blue-palette)
-//     )
-//   )
-// );
-
-// @include mat.all-component-themes($blue-theme);
 
 $component-padding-small: 50px 100px;
 $component-padding: 80px 100px;
@@ -24,7 +11,8 @@ $gap-40: 40px;
 $bg-white: white;
 $primary-blue: #5988ff;
 $dark-blue: #0043f0;
-$gardient-blue: linear-gradient(135deg, $primary-blue 0%, #4176fb 50%, $dark-blue 100%);
+$gradient-white: linear-gradient(rgb(255, 255, 255), rgb(233, 239, 255));
+$gradient-blue: linear-gradient(135deg, $primary-blue 0%, #4176fb 50%, $dark-blue 100%);
 
 $font-montserrat: "Montserrat", sans-serif;
 $font-baloo: "Baloo 2", sans-serif;
