@@ -1,0 +1,58 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <p>
+    <mat-form-field appearance="outline" class="field">
+      <mat-label>Your name</mat-label>
+      <input matInput required formControlName="name" />
+      <mat-icon
+        matSuffix
+        *ngIf="contactForm.get('name')?.touched"
+        [style.color]="contactForm.get('name')?.valid ? 'green' : 'red'"
+      >
+        {{ contactForm.get("name")?.valid ? "check_circle" : "error" }}
+      </mat-icon>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline" class="field">
+      <mat-label>Your email</mat-label>
+      <input matInput required formControlName="email" />
+      <mat-icon
+        matSuffix
+        *ngIf="contactForm.get('email')?.touched"
+        [style.color]="contactForm.get('email')?.valid ? 'green' : 'red'"
+      >
+        {{ contactForm.get("email")?.valid ? "check_circle" : "error" }}
+      </mat-icon>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline" class="field">
+      <mat-label>Your message</mat-label>
+      <textarea matInput required formControlName="message"></textarea>
+      <mat-icon
+        matSuffix
+        *ngIf="contactForm.get('message')?.touched"
+        [style.color]="contactForm.get('message')?.valid ? 'green' : 'red'"
+      >
+        {{ contactForm.get("message")?.valid ? "check_circle" : "error" }}
+      </mat-icon>
+    </mat-form-field>
+  </p>
+
+  <mat-checkbox color="primary" formControlName="checkbox">
+    I've read the <a href="#">privacy policy</a>and agree to the processing of
+    my data as outlined.
+    <mat-error *ngIf="submitted && contactForm.get('checkbox')?.value == false">
+      Please accept the privacy policy</mat-error
+    >
+  </mat-checkbox>
+
+  <div class="button-container">
+    <button
+      [ngClass]="contactForm.valid ? 'gradient-button' : 'disabled-button'"
+      type="submit"
+    >
+      <span>Send</span>
+    </button>
+  </div>
+</form>
