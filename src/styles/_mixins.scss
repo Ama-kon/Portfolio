@@ -28,8 +28,8 @@
 @mixin h3 {
     font-family: $font-baloo;
     font-weight: 700;
-    line-height: 24px;
-    font-size: clamp(28px, 5vw, 48px);
+    line-height: 48px;
+    font-size: clamp(28px, 5vw, 40px);
     margin: 0;
 }
 
@@ -41,10 +41,10 @@
         padding: 10px 20px;
         display: inline-block;
         width: clamp(100px, 16vw, 250px);
-        cursor: pointer;
         position: relative;
         overflow: hidden;
         height: 56px;
+        cursor: pointer;
     }
 
     .gradient-button::before {
@@ -54,7 +54,7 @@
         left: 0;
         width: 0;
         height: 0;
-        background: $gardient-blue;
+        background: $gradient-blue;
         transition:
             width 100ms ease-in-out,
             height 100ms ease-in-out;
@@ -66,7 +66,8 @@
         height: 100%;
     }
 
-    .gradient-button a {
+    .gradient-button a,
+    .gradient-button span {
         color: $primary-blue;
         text-decoration: none;
         font-size: 21px;
@@ -76,7 +77,31 @@
         display: block;
     }
 
-    .gradient-button:hover a {
+    .gradient-button:hover a,
+    .gradient-button:hover span {
         color: #ffffff;
+    }
+}
+
+.disabled-button {
+    background: transparent;
+    border: 2px solid #6e6e6e;
+    border-radius: 15px;
+    padding: 10px 20px;
+    display: inline-block;
+    width: clamp(100px, 16vw, 250px);
+    position: relative;
+    overflow: hidden;
+    height: 56px;
+    cursor: not-allowed !important;
+    .disabled-button a,
+    .disabled-button span {
+        color: #6e6e6e;
+        text-decoration: none;
+        font-size: 21px;
+        position: relative;
+        z-index: 1;
+        display: block;
+        cursor: not-allowed !important;
     }
 }
