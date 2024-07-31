@@ -1,7 +1,7 @@
 @import "./../../../styles/styles.scss";
 
 section {
-    background: $gardient-blue;
+    background: $gradient-blue;
     color: white;
     padding: $component-padding;
     @include flex-column;

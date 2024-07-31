@@ -14,13 +14,13 @@ export class TestimonialsComponent {
       name: 'Nuria N.',
       project: 'Employee at Amalthea',
       opinion:
-        'Amalia is very organized at work and never loses her calm. Additionally, she was always very polite and fully dedicated to her team.',
+        'Amalia is very organized at work and never loses her calm. She always stays polite and is fully dedicated to her team. Her positive attitude and friendly nature make her great to work with. I would be happy to work with her again.',
     },
     {
-      name: 'test N.',
+      name: 'Michael B.',
       project: 'Project Join',
       opinion:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, laborum perferendis. Quaerat laboriosam dolor labore voluptatibus perferendis distinctio quo dolorum ab, voluptas aliquid nemo temporibus voluptate voluptates consectetur fuga accusamus.',
+        'Amalia is an absolute asset to every team with her communicative and friendly manner. She keeps focus and remains cool-headed in stressful situations. On top of that, she is also very good at breaking down complex issues in an understandable and clear way. Her style of coding is just the same: easy to follow, precise, clean. It was a true pleasure working with her!',
     },
   ];
 }
