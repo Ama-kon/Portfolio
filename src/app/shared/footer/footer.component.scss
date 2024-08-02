@@ -1,0 +1,46 @@
+@import "./../../../styles/styles.scss";
+
+footer {
+    padding: $component-padding;
+    background: $gradient-blue;
+    font-family: $font-montserrat;
+    font-size: 18px;
+}
+
+.container-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo img {
+        @include logo;
+    }
+    .copyright {
+        color: white;
+    }
+    .social-buttons {
+        display: flex;
+        gap: 2vw;
+        img {
+            height: 30px;
+            width: 30px;
+            filter: brightness(0) invert(1);
+            transition: all 125ms ease;
+            cursor: pointer;
+            &:hover {
+                height: 35px;
+                width: 35px;
+            }
+        }
+    }
+}
+
+.legal-notice {
+    left: 45%;
+    position: absolute;
+    a {
+        text-decoration: none;
+        color: white;
+        position: relative;
+        @include legal-notice-hover;
+    }
+}

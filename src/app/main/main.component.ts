@@ -6,6 +6,7 @@ import { SkillSetComponent } from './skill-set/skill-set.component';
 import { MyWorkComponent } from './my-work/my-work.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from '../shared/footer/footer.component';
 
 @Component({
   selector: 'app-main',
@@ -18,6 +19,7 @@ import { ContactComponent } from './contact/contact.component';
     MyWorkComponent,
     TestimonialsComponent,
     ContactComponent,
+    FooterComponent,
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
