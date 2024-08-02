@@ -33,6 +33,33 @@
     margin: 0;
 }
 
+@mixin logo {
+    width: 100px;
+    height: 80px;
+    filter: invert(1);
+}
+
+@mixin legal-notice-hover {
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        transition: width 125ms ease;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+
+    &:hover {
+        font-weight: 600;
+    }
+}
+
 @mixin gradient-button {
     .gradient-button {
         background: transparent;
@@ -104,4 +131,34 @@
         display: block;
         cursor: not-allowed !important;
     }
+}
+
+@mixin circle-width-xs {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+}
+
+@mixin circle-width-s {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+@mixin circle-width-m {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+@mixin circle-width-l {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+}
+
+@mixin circle-width-xl {
+    position: absolute;
+    width: 400px;
+    height: 400px;
 }
