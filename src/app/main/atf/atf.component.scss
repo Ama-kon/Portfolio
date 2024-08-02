@@ -19,25 +19,24 @@
     z-index: 250;
     display: flex;
     position: absolute;
-    top: -20px;
-    left: -20px;
-    width: 250px;
-    height: 250px;
-    filter: invert(1);
+    top: 30px;
+    left: 20px;
+    @include logo;
 }
 
 .headlines-container {
     position: absolute;
     right: 90px;
-    top: 20%;
+    top: 30vh;
     .headlines {
         @include flex-column;
         align-items: flex-start;
         width: fit-content;
+        gap: 24px;
         h2 {
             font-family: $font-baloo;
             font-weight: 400;
-            font-size: 64px;
+            font-size: clamp(30px, 3.5vw, 64px);
             margin: 0;
         }
         h1 {
