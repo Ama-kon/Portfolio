@@ -15,3 +15,16 @@ section {
         @include span-font-black;
     }
 }
+
+.circle0 {
+    @include circle-width-s;
+    top: 5vh;
+    right: 40vw;
+}
+
+.circle1 {
+    @include circle-width-m;
+    top: 17vh;
+    right: 9vw;
+    z-index: 1;
+}

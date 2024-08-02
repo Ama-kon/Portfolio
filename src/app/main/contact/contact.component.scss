@@ -5,6 +5,7 @@ section {
     @include flex-column;
     gap: $gap-40;
     background: $gradient-white;
+    position: relative;
     h2 {
         @include h2;
     }
@@ -17,6 +18,8 @@ section {
 
 .contact-text {
     width: 50%;
+    @include flex-column;
+    gap: $gap-40;
     h3 {
         @include h3;
     }
@@ -27,4 +30,28 @@ section {
 
 .contact-form {
     width: 50%;
+}
+
+.circle0 {
+    @include circle-width-s;
+    top: 40px;
+    right: 80px;
+}
+
+.circle1 {
+    @include circle-width-m;
+    bottom: 50px;
+    left: 150px;
+}
+
+.circle2 {
+    @include circle-width-xs;
+    bottom: 40px;
+    right: 80px;
+}
+
+@media (max-width: 1130px) {
+    .circle2 {
+        display: none;
+    }
 }

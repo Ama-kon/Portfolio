@@ -8,7 +8,7 @@ section {
     box-sizing: border-box;
     position: relative;
     background: $bg-white;
-
+    overflow: hidden;
     .lets-work,
     .about-me {
         padding: $container-padding;
@@ -65,4 +65,16 @@ section {
     > button {
         min-width: 215px;
     }
+}
+
+.circle0 {
+    @include circle-width-xs;
+    top: 5vh;
+    right: 10vw;
+}
+
+.circle1 {
+    @include circle-width-m;
+    top: -12vh;
+    left: 35vw;
 }

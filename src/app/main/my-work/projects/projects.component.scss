@@ -13,7 +13,7 @@ section {
         gap: 42px;
         height: 40vh;
     }
-    .single-project-container:nth-child(2) {
+    .single-project-container:nth-of-type(2) {
         flex-direction: row-reverse;
         .project-info-container {
             align-items: flex-end;
@@ -40,6 +40,7 @@ section {
     .img-container,
     .project-info-container {
         width: 50%;
+        z-index: 10;
     }
 }
 
@@ -61,4 +62,27 @@ h2 {
         text-decoration: none;
         cursor: pointer;
     }
+}
+
+.circle0 {
+    @include circle-width-l;
+    top: 20vh;
+    left: -20vh;
+}
+
+.circle1 {
+    @include circle-width-xl;
+    top: 50vh;
+    right: -24vw;
+}
+
+.circle2 {
+    @include circle-width-xs;
+    top: 90vh;
+    left: 0vw;
+}
+
+.circle3 {
+    @include circle-width-m;
+    bottom: -5vh;
 }

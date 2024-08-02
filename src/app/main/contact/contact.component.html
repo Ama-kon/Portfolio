@@ -1,4 +1,11 @@
 <section>
+  @for (item of [1,2,3]; track $index) {
+  <img
+    class="circle{{ $index }}"
+    src="/assets/img/design-only/design-circle.png"
+    alt="design circle"
+  />
+  }
   <h2>Contact</h2>
   <div class="text-form-container">
     <div class="contact-text">
@@ -10,11 +17,8 @@
       >
       <span>Need a Frontend developer? <b>Contact me!</b></span>
     </div>
-
     <div class="contact-form">
       <app-contact-form></app-contact-form>
-
-      <!-- testetstetststte -->
     </div>
   </div>
 </section>

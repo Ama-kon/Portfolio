@@ -1,4 +1,12 @@
 <section>
+  @for (item of [1,2]; track $index) {
+  <img
+    class="circle{{ $index }}"
+    src="/assets/img/design-only/design-circle.png"
+    alt="design circle"
+  />
+  }
+
   <div class="my-work-headline">
     <h2>My work</h2>
     <span

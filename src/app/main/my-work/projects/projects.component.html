@@ -1,5 +1,11 @@
 <section>
-  @for (project of projects; track project) {
+  @for (item of [1,2,3,4]; track $index) {
+  <img
+    class="circle{{ $index }}"
+    src="/assets/img/design-only/design-circle.png"
+    alt="design circle"
+  />
+  } @for (project of projects; track project) {
   <div class="single-project-container">
     <div class="img-container">
       <img class="project-img" src=" {{ project.img }}" alt="" />
