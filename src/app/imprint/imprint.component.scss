@@ -1,0 +1,18 @@
+@import "./../../styles/styles.scss";
+
+main {
+    padding: $component-padding;
+    background: $bg-white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-left: 2px solid $primary-blue;
+    border-top: 6px solid $primary-blue;
+}
+
+@media (max-width: 700px) {
+    main {
+        padding: 20px;
+        border: none;
+        text-align: center;
+    }
+}
