@@ -20,9 +20,9 @@
 @mixin h2 {
     font-family: $font-baloo;
     font-weight: 700;
-    line-height: 90px;
     margin: 0;
-    font-size: 64px;
+    font-size: clamp(36px, 7vw, 70px);
+    line-height: clamp(36px, 7vw, 70px);
 }
 
 @mixin h3 {
