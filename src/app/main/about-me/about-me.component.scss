@@ -16,7 +16,8 @@ section {
     }
     h2 {
         @include h2;
-        font-size: 100px;
+        font-size: clamp(50px, 13vw, 88px);
+        line-height: clamp(50px, 13vw, 88px);
     }
 }
 
@@ -77,4 +78,32 @@ section {
     @include circle-width-m;
     top: -12vh;
     left: 35vw;
+}
+
+@media screen and (max-width: 1100px) {
+    section {
+        flex-direction: column;
+        .lets-work,
+        .about-me {
+            width: 100%;
+        }
+        .lets-work,
+        .button-container {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    section {
+        padding: $component-padding-responsive;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .i-am-img-container {
+        flex-direction: column;
+        align-items: center;
+        gap: $gap-40;
+    }
 }
