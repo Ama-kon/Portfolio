@@ -28,3 +28,25 @@ section {
     right: 9vw;
     z-index: 1;
 }
+
+@media screen and (max-width: 1200px) {
+    .circle1 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    section {
+        padding: $component-padding-responsive;
+    }
+    .circle0 {
+        top: 3vh;
+        right: 5vw;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .circle0 {
+        display: none;
+    }
+}

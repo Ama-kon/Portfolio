@@ -55,3 +55,19 @@ section {
         display: none;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .text-form-container {
+        flex-direction: column;
+        .contact-text,
+        .contact-form {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    section {
+        padding: $component-padding-responsive;
+    }
+}
