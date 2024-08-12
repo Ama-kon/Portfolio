@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -10,4 +9,12 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  constructor() {}
+
+  toggleMenu() {
+    document.querySelectorAll('#nav-icon-mobile').forEach((span) => {
+      span.classList.toggle('open');
+    });
+  }
+}

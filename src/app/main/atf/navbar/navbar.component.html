@@ -1,5 +1,16 @@
 <nav>
-  <div class="nav-container">
+  <div id="nav-desktop" class="nav-container">
+    <a href="#">About me</a>
+    <a href="#">Skill set</a>
+    <a href="#">My work</a>
+    <a href="#">Contact</a>
+  </div>
+  <div id="nav-icon-mobile" (click)="toggleMenu()" class="d-none">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="mobile-nav-container">
     <a href="#">About me</a>
     <a href="#">Skill set</a>
     <a href="#">My work</a>
