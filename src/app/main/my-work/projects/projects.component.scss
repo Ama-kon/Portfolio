@@ -3,18 +3,19 @@
 section {
     width: 100%;
     @include flex-column;
-    gap: 10vh;
+    gap: $gap-40;
     box-sizing: border-box;
     position: relative;
     background: $bg-white;
     .single-project-container {
         display: flex;
         align-items: center;
-        gap: 42px;
-        height: 40vh;
+        gap: $gap-40;
+        padding-bottom: $gap-40;
     }
     .single-project-container:nth-of-type(2) {
         flex-direction: row-reverse;
+        padding-bottom: $gap-40;
         .project-info-container {
             align-items: flex-end;
         }
@@ -66,23 +67,104 @@ h2 {
 
 .circle0 {
     @include circle-width-l;
-    top: 20vh;
+    top: 10vh;
     left: -20vh;
 }
 
 .circle1 {
     @include circle-width-xl;
-    top: 50vh;
-    right: -24vw;
+    top: 40vh;
+    right: -10vw;
 }
 
 .circle2 {
     @include circle-width-xs;
-    top: 90vh;
-    left: 0vw;
+    top: 75vh;
+    left: 0;
 }
 
 .circle3 {
     @include circle-width-m;
     bottom: -5vh;
+}
+
+@media (max-width: 1150px) {
+    .circle1 {
+        right: -24vw;
+    }
+    .circle2 {
+        left: 5vw;
+    }
+}
+
+@media (max-width: 990px) {
+    .single-project-container,
+    .single-project-container:nth-of-type(2) {
+        flex-direction: column !important;
+        height: auto;
+        .img-container {
+            width: 90%;
+            align-items: center;
+        }
+        .project-info-container {
+            width: 100%;
+            align-items: center !important;
+        }
+        .description {
+            text-align: center !important;
+        }
+    }
+
+    .circle1 {
+        bottom: 25vh;
+        top: unset;
+    }
+    .circle3 {
+        @include circle-width-s;
+        bottom: -4vh;
+        left: -9vw;
+    }
+}
+
+@media (max-width: 750px) {
+    .circle0 {
+        @include circle-width-m;
+        left: -20vw;
+        top: 0;
+    }
+    .circle2 {
+        top: 70vh;
+        left: -5vw;
+    }
+}
+
+@media (max-width: 720px) {
+    .circle3 {
+        left: -3vw;
+        bottom: -2vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .circle1 {
+        @include circle-width-l;
+        top: unset;
+        bottom: 30vh;
+    }
+    .circle3 {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .circle1 {
+        @include circle-width-m;
+        bottom: 35vh;
+    }
+}
+
+@media (max-width: 380px) {
+    .circle0 {
+        top: -4vh;
+    }
 }

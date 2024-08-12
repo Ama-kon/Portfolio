@@ -29,6 +29,7 @@ section {
 }
 
 .contact-form {
+    display: inline-flex;
     width: 50%;
 }
 
@@ -40,8 +41,8 @@ section {
 
 .circle1 {
     @include circle-width-m;
-    bottom: 50px;
-    left: 150px;
+    bottom: 4vh;
+    left: 15vw;
 }
 
 .circle2 {
@@ -51,6 +52,9 @@ section {
 }
 
 @media (max-width: 1130px) {
+    .circle1 {
+        @include circle-width-s;
+    }
     .circle2 {
         display: none;
     }
@@ -69,5 +73,13 @@ section {
 @media screen and (max-width: 700px) {
     section {
         padding: $component-padding-responsive;
+    }
+    .circle0 {
+        @include circle-width-xs;
+        top: 2vh;
+        right: 2vw;
+    }
+    .circle1 {
+        display: none;
     }
 }

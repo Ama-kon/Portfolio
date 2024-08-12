@@ -11,9 +11,10 @@
     position: absolute;
     top: -80px;
     left: -100px;
-    width: clamp(300px, 38vw, 600px);
-    height: clamp(300px, 38vw, 600px);
+    width: clamp(250px, 43vw, 600px);
+    height: clamp(250px, 43vw, 600px);
     z-index: 150;
+    pointer-events: none;
 }
 .logo {
     z-index: 250;
@@ -42,8 +43,8 @@
         h1 {
             font-family: $font-baloo;
             font-weight: 800;
-            font-size: clamp(60px, 7vw, 128px);
-            line-height: clamp(60px, 7vw, 128px);
+            font-size: clamp(40px, 7vw, 128px);
+            line-height: clamp(40px, 7vw, 128px);
             margin: 0;
         }
     }
@@ -92,8 +93,48 @@
     }
 }
 
-@media (max-width: 830px) {
+@media screen and (max-width: 830px) {
     .scroll-container {
         display: none;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .logo {
+        top: 24px;
+        left: 8px;
+        width: 75px;
+        height: 60px;
+    }
+    .circle {
+        top: -24px;
+        left: -225px;
+        width: 700px;
+        height: 700px;
+    }
+    .headlines-container {
+        color: white;
+        z-index: 300;
+        left: 10vw;
+        top: 20vh;
+    }
+    .social-buttons {
+        display: none;
+    }
+    .profile-picture {
+        left: 0;
+        width: 100%;
+        max-height: 55%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .circle {
+        top: -5px;
+        left: -350px;
+    }
+}
+
+// @media screen and (max-width: 480px) {
+
+// }
