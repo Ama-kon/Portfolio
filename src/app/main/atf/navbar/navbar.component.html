@@ -1,19 +1,14 @@
 <nav>
   <div id="nav-desktop" class="nav-container">
-    <a href="#">About me</a>
-    <a href="#">Skill set</a>
-    <a href="#">My work</a>
-    <a href="#">Contact</a>
+    <a href="#app-about-me">About me</a>
+    <a href="#app-skill-set">Skill set</a>
+    <a href="#app-my-work">My work</a>
+    <a href="#app-contact">Contact</a>
   </div>
-  <div id="nav-icon-mobile" (click)="toggleMenu()" class="d-none">
+  <div id="nav-icon-mobile" (click)="toggleMobile()">
     <span></span>
     <span></span>
     <span></span>
   </div>
-  <div class="mobile-nav-container">
-    <a href="#">About me</a>
-    <a href="#">Skill set</a>
-    <a href="#">My work</a>
-    <a href="#">Contact</a>
-  </div>
+  <app-mobile-navbar class="mobile-navbar d-none"></app-mobile-navbar>
 </nav>

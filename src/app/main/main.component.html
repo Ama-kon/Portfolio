@@ -1,10 +1,14 @@
 <div class="nav-bar-container">
-  <app-navbar class="nav-bar-component"></app-navbar>
+  <app-navbar
+    class="nav-bar-component"
+    [isMobileMenuOpen]="isMobileMenuOpen"
+    (menuToggled)="onToggled($event)"
+  ></app-navbar>
 </div>
 
 <app-atf class="atf-component"></app-atf>
-<app-about-me class="about-me-component"></app-about-me>
-<app-skill-set class="skill-set-component"></app-skill-set>
-<app-my-work class="my-work-component"></app-my-work>
-<app-testimonials></app-testimonials>
-<app-contact></app-contact>
+<app-about-me id="app-about-me" class="about-me-component"></app-about-me>
+<app-skill-set id="app-skill-set" class="skill-set-component"></app-skill-set>
+<app-my-work id="app-my-work" class="my-work-component"></app-my-work>
+<app-testimonials id="app-testimonials"></app-testimonials>
+<app-contact id="app-contact"></app-contact>

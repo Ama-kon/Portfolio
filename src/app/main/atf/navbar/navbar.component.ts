@@ -1,20 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MobileNavbarComponent } from '../mobile-navbar/mobile-navbar.component';
+import { ToggleMenuService } from '../../../services/toggle-menu.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [MatToolbarModule, MatButtonModule],
+  imports: [MatToolbarModule, MatButtonModule, MobileNavbarComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  constructor() {}
-
-  toggleMenu() {
-    document.querySelectorAll('#nav-icon-mobile').forEach((span) => {
-      span.classList.toggle('open');
-    });
+  @Input() isMobileMenuOpen: boolean = false;
+  @Output() menuToggled = new EventEmitter<boolean>();
+  constructor(private toggleMenuService: ToggleMenuService) {}
+  toggleMobile() {
+    this.toggleMenuService.toggleMenu();
+    this.menuToggled.emit(this.toggleMenuService.isMobileMenuOpen);
   }
 }
