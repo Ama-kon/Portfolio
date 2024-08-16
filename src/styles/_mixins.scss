@@ -162,3 +162,11 @@
     width: 400px;
     height: 400px;
 }
+
+@mixin hover-about-me-icons {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 125ms ease;
+    display: flex;
+    pointer-events: none;
+}

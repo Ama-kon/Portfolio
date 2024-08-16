@@ -50,7 +50,28 @@ section {
 .remote-img {
     background-size: contain;
     background-repeat: no-repeat;
-    box-sizing: border-box;
+}
+
+.located-img-container,
+.remote-img-container {
+    position: relative;
+    cursor: pointer;
+
+    &:hover::before {
+        opacity: 1;
+    }
+}
+
+.located-img-container::before {
+    content: url("/assets/img/about-me-icons/location-hover-icon.png");
+    @include hover-about-me-icons;
+}
+
+.remote-img-container::before {
+    content: url("/assets/img/about-me-icons/remote-hover-icon.png");
+    @include hover-about-me-icons;
+    bottom: 0;
+    right: 0;
 }
 
 .about-me {
