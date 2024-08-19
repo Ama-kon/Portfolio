@@ -14,6 +14,7 @@ section {
         padding: $container-padding;
         width: 50%;
     }
+
     h2 {
         @include h2;
         font-size: clamp(50px, 13vw, 88px);
@@ -107,6 +108,7 @@ section {
         .lets-work,
         .about-me {
             width: 100%;
+            padding: 0;
         }
         .lets-work,
         .button-container {
@@ -119,6 +121,13 @@ section {
     section {
         padding: $component-padding-responsive;
     }
+    .circle0 {
+        top: 1vh;
+        right: 3vw;
+    }
+    .circle1 {
+        top: -16vh;
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -126,5 +135,11 @@ section {
         flex-direction: column;
         align-items: center;
         gap: $gap-40;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .circle1 {
+        display: none;
     }
 }
