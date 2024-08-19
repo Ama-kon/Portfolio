@@ -35,8 +35,23 @@ export class MainComponent implements OnInit {
     this.isMobileMenuOpen = this.toggleMenuService.isMobileMenuOpen;
   }
 
+  ngAfterViewInit() {
+    this.preventDrag();
+  }
+
   onToggled(isOpen: boolean) {
     this.toggleMenuService.onMenuToggled(isOpen);
     this.isMobileMenuOpen = isOpen;
+  }
+
+  preventDrag() {
+    let images = document.querySelectorAll('img');
+    let links = document.querySelectorAll('a');
+    images.forEach((img) => {
+      img.addEventListener('dragstart', (e) => e.preventDefault());
+    });
+    links.forEach((link) => {
+      link.addEventListener('dragstart', (e) => e.preventDefault());
+    });
   }
 }
