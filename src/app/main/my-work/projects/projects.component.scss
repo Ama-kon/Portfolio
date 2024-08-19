@@ -48,6 +48,12 @@ section {
 .project-img {
     width: 100%;
     height: 100%;
+    transition: all 125ms ease-in-out;
+    &:hover {
+        transform: translateY(-10px) translateX(10px);
+        width: 105%;
+        height: 105%;
+    }
 }
 
 h2 {
@@ -133,8 +139,8 @@ h2 {
         top: 0;
     }
     .circle2 {
-        top: 70vh;
-        left: -5vw;
+        top: 80vh;
+        left: -7vw;
     }
 }
 

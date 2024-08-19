@@ -17,7 +17,7 @@ h2 {
 
 .skill-set-container {
     display: flex;
-    gap: 88px;
+    gap: clamp(50px, 13vw, 88px);
     flex-wrap: wrap;
     width: 65%;
     justify-content: center;
@@ -51,5 +51,8 @@ h2 {
 @media screen and (max-width: 700px) {
     section {
         padding: $component-padding-responsive;
+    }
+    .skill-set-container {
+        width: 90%;
     }
 }
