@@ -10,6 +10,8 @@ import { Project } from '../../../interfaces/project.interface';
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
+  constructor() {}
+
   projects: Project[] = [
     {
       img: 'assets/img/projects/join-project-icon.png',
@@ -30,7 +32,7 @@ export class ProjectsComponent {
       live: '',
     },
     {
-      img: 'assets/img/projects/Devices.png',
+      img: 'assets/img/projects/pokedex-project-icon.png',
       title: 'Pokedex',
       stack: 'JavaScript | HTML | CSS | Api',
       description:
