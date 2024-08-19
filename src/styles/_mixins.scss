@@ -34,8 +34,8 @@
 }
 
 @mixin logo {
-    width: 100px;
-    height: 80px;
+    width: clamp(50px, 11vw, 90px);
+    height: clamp(40px, 9vw, 70px);
     filter: invert(1);
 }
 
