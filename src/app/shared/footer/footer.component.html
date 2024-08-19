@@ -16,7 +16,7 @@
     </div>
   </div>
 
-  <div class="legal-notice">
+  <div *ngIf="!window.location.href.includes('imprint')" class="legal-notice">
     <a target="_blank" href="imprint">Legal notice</a>
   </div>
 </footer>
