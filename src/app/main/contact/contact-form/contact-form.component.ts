@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { HttpClient } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
+import { ValidatorFn, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-form',
@@ -41,10 +42,21 @@ export class ContactFormComponent implements OnInit {
   ngOnInit() {
     this.contactForm = this.formBuilder.group({
       name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['', Validators.required],
+      email: [
+        '',
+        [Validators.required, Validators.email, this.emailValidator()],
+      ],
+      message: ['', [Validators.required, Validators.minLength(3)]],
       checkbox: [false, Validators.requiredTrue],
     });
+  }
+
+  emailValidator(): ValidatorFn {
+    return (control: AbstractControl): { [key: string]: any } | null => {
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      const valid = emailPattern.test(control.value);
+      return valid ? null : { invalidEmail: { value: control.value } };
+    };
   }
 
   http = inject(HttpClient);

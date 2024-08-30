@@ -15,12 +15,7 @@
   <p>
     <mat-form-field appearance="outline" class="field">
       <mat-label>{{ "your-email" | translate }}</mat-label>
-      <input
-        matInput
-        required
-        formControlName="email"
-        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-      />
+      <input matInput required formControlName="email" />
       <mat-icon
         matSuffix
         *ngIf="contactForm.get('email')?.touched"
