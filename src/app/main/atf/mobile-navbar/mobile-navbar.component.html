@@ -13,8 +13,13 @@
       "contact" | translate
     }}</a>
     <div>
-      <button id="german" (click)="switchLanguage('de')">DE</button> |
-      <button id="english" (click)="switchLanguage('en')">EN</button>
+      <button id="german" (click)="switchLanguage('de'); closeMobileNav()">
+        DE
+      </button>
+      |
+      <button id="english" (click)="switchLanguage('en'); closeMobileNav()">
+        EN
+      </button>
     </div>
   </div>
 </div>
