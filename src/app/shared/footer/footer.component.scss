@@ -59,7 +59,20 @@ footer {
         gap: 28px;
     }
     .copyright {
+        // text-align: center;
+        width: 100% !important;
+        margin: 0 auto;
+    }
+    .logo {
         text-align: center;
+    }
+    .social-buttons {
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    .legal-notice {
+        width: 50%;
+        margin: 0 auto;
     }
 }
 
