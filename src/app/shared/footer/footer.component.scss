@@ -11,24 +11,31 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .logo img {
-        @include logo;
+    .logo {
+        width: 33%;
+        img {
+            @include logo;
+        }
     }
+
     .copyright {
         color: white;
+        width: 33%;
+        text-align: center;
     }
     .social-buttons {
         display: flex;
         gap: 2vw;
+        width: 33%;
+        justify-content: flex-end;
         img {
-            height: 30px;
-            width: 30px;
+            height: 35px;
+            width: 35px;
             filter: brightness(0) invert(1);
             transition: all 125ms ease;
             cursor: pointer;
             &:hover {
-                height: 35px;
-                width: 35px;
+                transform: scale(1.17);
             }
         }
     }
@@ -41,6 +48,7 @@ footer {
         text-decoration: none;
         color: white;
         position: relative;
+        font-size: 16px;
         @include legal-notice-hover;
     }
 }
