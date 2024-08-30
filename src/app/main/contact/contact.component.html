@@ -1,23 +1,27 @@
 <section>
-  @for (item of [1,2,3]; track $index) {
-  <img
-    class="circle{{ $index }}"
-    src="/assets/img/design-only/design-circle.png"
-    alt="design circle"
-  />
-  }
-  <h2>{{ "contact" | translate }}</h2>
-  <div class="text-form-container">
-    <div class="contact-text">
-      <h3>{{ "problem-to-solve" | translate }}</h3>
-      <span class="contact-me-text"> {{ "contact-me-text" | translate }}</span>
-      <span
-        >{{ "need-developer" | translate
-        }}<b>{{ "contact-me!" | translate }}</b></span
-      >
-    </div>
-    <div class="contact-form">
-      <app-contact-form></app-contact-form>
+  <div class="max-width">
+    @for (item of [1,2,3]; track $index) {
+    <img
+      class="circle{{ $index }}"
+      src="/assets/img/design-only/design-circle.png"
+      alt="design circle"
+    />
+    }
+    <h2>{{ "contact" | translate }}</h2>
+    <div class="text-form-container">
+      <div class="contact-text">
+        <h3>{{ "problem-to-solve" | translate }}</h3>
+        <span class="contact-me-text">
+          {{ "contact-me-text" | translate }}</span
+        >
+        <span
+          >{{ "need-developer" | translate
+          }}<b>{{ "contact-me!" | translate }}</b></span
+        >
+      </div>
+      <div class="contact-form">
+        <app-contact-form></app-contact-form>
+      </div>
     </div>
   </div>
 </section>

@@ -1,61 +1,63 @@
 <section>
-  @for (item of [1,2]; track $index) {
-  <img
-    class="circle{{ $index }}"
-    src="/assets/img/design-only/design-circle.png"
-    alt="design circle"
-  />
-  }
-  <div class="lets-work">
-    <h2>
-      {{ "lets" | translate }}
-      {{ "work-together" | translate }}
-    </h2>
-    <div class="i-am-container">
-      <span> {{ "i-am" | translate }}</span>
-      <div class="i-am-img-container">
-        <div class="located-in-container">
-          <div class="located-img-container">
-            <img
-              class="location-img"
-              src="/assets/img/about-me-icons/location-icon.png"
-              alt="location icon"
-            />
-          </div>
+  <div class="max-width">
+    @for (item of [1,2]; track $index) {
+    <img
+      class="circle{{ $index }}"
+      src="/assets/img/design-only/design-circle.png"
+      alt="design circle"
+    />
+    }
+    <div class="lets-work">
+      <h2>
+        {{ "lets" | translate }}
+        {{ "work-together" | translate }}
+      </h2>
+      <div class="i-am-container">
+        <span> {{ "i-am" | translate }}</span>
+        <div class="i-am-img-container">
+          <div class="located-in-container">
+            <div class="located-img-container">
+              <img
+                class="location-img"
+                src="/assets/img/about-me-icons/location-icon.png"
+                alt="location icon"
+              />
+            </div>
 
-          <span
-            >{{ "located-in" | translate }} <br />
-            Ludwigshafen</span
-          >
-        </div>
-        <div class="about-me-container">
-          <div class="remote-img-container">
-            <img
-              class="remote-img"
-              src="/assets/img/about-me-icons/remote-icon.png"
-              alt="remote icon"
-            />
+            <span
+              >{{ "located-in" | translate }} <br />
+              Ludwigshafen</span
+            >
           </div>
-          {{ "open-to-work-1" | translate }} <br />
-          {{ "open-to-work-2" | translate }}
+          <div class="about-me-container">
+            <div class="remote-img-container">
+              <img
+                class="remote-img"
+                src="/assets/img/about-me-icons/remote-icon.png"
+                alt="remote icon"
+              />
+            </div>
+            {{ "open-to-work-1" | translate }} <br />
+            {{ "open-to-work-2" | translate }}
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="about-me">
-    <span>
-      {{ "about-me-text-1" | translate }}
-      <br />
-      {{ "about-me-text-2" | translate }}
-      <br />
-      <br />
-      {{ "about-me-text-3" | translate }}
-    </span>
-    <div class="button-container">
-      <button class="gradient-button">
-        <a href="#app-contact">{{ "send-message" | translate }}</a>
-      </button>
+    <div class="about-me">
+      <span>
+        {{ "about-me-text-1" | translate }}
+        <br />
+        {{ "about-me-text-2" | translate }}
+        <br />
+        <br />
+        {{ "about-me-text-3" | translate }}
+      </span>
+      <div class="button-container">
+        <button class="gradient-button">
+          <a href="#app-contact">{{ "send-message" | translate }}</a>
+        </button>
+      </div>
     </div>
   </div>
 </section>

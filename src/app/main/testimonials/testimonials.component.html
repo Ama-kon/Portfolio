@@ -1,17 +1,19 @@
 <section>
-  <div class="headline-container">
-    <h2>{{ "need-teamplayer" | translate }}</h2>
-    <span> {{ "people-text" | translate }}</span>
-  </div>
-  <div class="testimonials">
-    @for (testimonial of testimonials; track testimonial) {
-    <div class="single-testimonial">
-      <div class="name-title-container">
-        <span class="name">{{ testimonial.name }}</span>
-        <span class="project">{{ testimonial.project | translate }}</span>
-      </div>
-      <span class="opinion">{{ testimonial.opinion | translate }}</span>
+  <div class="max-width">
+    <div class="headline-container">
+      <h2>{{ "need-teamplayer" | translate }}</h2>
+      <span> {{ "people-text" | translate }}</span>
     </div>
-    }
+    <div class="testimonials">
+      @for (testimonial of testimonials; track testimonial) {
+      <div class="single-testimonial">
+        <div class="name-title-container">
+          <span class="name">{{ testimonial.name }}</span>
+          <span class="project">{{ testimonial.project | translate }}</span>
+        </div>
+        <span class="opinion">{{ testimonial.opinion | translate }}</span>
+      </div>
+      }
+    </div>
   </div>
 </section>
