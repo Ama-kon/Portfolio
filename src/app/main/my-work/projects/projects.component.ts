@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Project } from '../../../interfaces/project.interface';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
@@ -17,28 +18,25 @@ export class ProjectsComponent {
       img: 'assets/img/projects/join-project-icon.png',
       title: 'Join',
       stack: 'Angular | TypeScript | HTML | CSS | Firebase',
-      description:
-        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      description: 'join-text',
       github: 'https://github.com/CodeRacon/join',
-      live: '',
+      live: 'https://join.amalia-konstantinidou.de',
     },
     {
       img: 'assets/img/projects/sharkie-project-icon.png',
       title: 'Sharkie',
       stack: 'JavaScript | HTML | CSS',
-      description:
-        'Swim and throw bubbles in this game based on an object-oriented approach. Help Sharkie find coins and poison bottles to fight against the ocean enemies',
+      description: 'sharkie-text',
       github: 'https://github.com/Ama-kon/Sharkie',
-      live: '',
+      live: 'https://sharkie.amalia-konstantinidou.de',
     },
     {
       img: 'assets/img/projects/pokedex-project-icon.png',
       title: 'Pokedex',
       stack: 'JavaScript | HTML | CSS | Api',
-      description:
-        'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+      description: 'pokedex-text',
       github: 'https://github.com/Ama-kon/Pokedex',
-      live: '',
+      live: 'https://pokedex.amalia-konstantinidou.de/',
     },
   ];
 }
