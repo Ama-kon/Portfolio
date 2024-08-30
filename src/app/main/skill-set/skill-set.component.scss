@@ -5,46 +5,58 @@ section {
     height: fit-content;
     padding: $component-padding;
     box-sizing: border-box;
-    @include flex-column;
-    align-items: center;
+
     gap: $gap-40;
+    > div {
+        @include flex-column;
+        align-items: center;
+    }
 }
 
 h2 {
     @include h2;
     color: white;
+    padding-bottom: 42px;
 }
 
 .skill-set-container {
     display: flex;
-    gap: clamp(50px, 13vw, 88px);
     flex-wrap: wrap;
+    gap: clamp(50px, 13vw, 88px);
     width: 65%;
     justify-content: center;
+
     .img-text-container {
         @include flex-column;
         align-items: center;
-        gap: 16px;
+        width: calc((100% - 3 * clamp(50px, 13vw, 88px)) / 4);
+        min-width: 100px;
+
         &:hover {
             cursor: default;
+
             .skill-icon {
                 transform: translateY(-15px);
-                transition: transform 125ms ease;
             }
+
             span {
                 font-weight: 600;
             }
         }
     }
+
     .skill-icon {
         width: 64px;
         height: 64px;
         transition: transform 125ms ease;
     }
+
     span {
         color: white;
         font-family: $font-montserrat;
         font-size: 16px;
+        margin-top: 16px;
+        text-align: center;
     }
 }
 

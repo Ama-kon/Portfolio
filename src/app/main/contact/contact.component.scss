@@ -2,18 +2,21 @@
 
 section {
     padding: $component-padding;
-    @include flex-column;
-    gap: $gap-40;
     background: $gradient-white;
     position: relative;
+    > div {
+        @include flex-column;
+        gap: $gap-40;
+    }
     h2 {
         @include h2;
     }
-    .text-form-container {
-        display: flex;
-        width: 100%;
-        gap: $gap-40;
-    }
+}
+
+.text-form-container {
+    display: flex;
+    width: 100%;
+    gap: 10%;
 }
 
 .contact-text {
@@ -66,6 +69,7 @@ section {
 @media screen and (max-width: 900px) {
     .text-form-container {
         flex-direction: column;
+        gap: $gap-40;
         .contact-text,
         .contact-form {
             width: 100%;

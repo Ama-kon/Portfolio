@@ -4,8 +4,11 @@ section {
     background: $gradient-blue;
     color: white;
     padding: $component-padding;
-    @include flex-column;
-    gap: 8vh;
+
+    > div {
+        @include flex-column;
+        gap: 8vh;
+    }
 }
 
 .headline-container {

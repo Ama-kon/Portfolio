@@ -1,12 +1,13 @@
 @import "./../../../../styles/styles.scss";
 
 nav {
-    .nav-container {
+    > div {
         @include flex-end;
+    }
+    .nav-container {
         padding: 0 1.5vw;
         box-sizing: border-box;
         background-color: $bg-white;
-        gap: 32px;
         font-family: $font-montserrat;
         font-weight: 400;
         font-size: 18px;
@@ -14,6 +15,8 @@ nav {
         a {
             text-decoration: none;
             color: $primary-blue;
+            width: 120px;
+            text-align: center;
             &:hover {
                 font-weight: 700;
             }
