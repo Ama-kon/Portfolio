@@ -26,4 +26,15 @@
             }
         }
     }
+    #german,
+    #english {
+        border: none;
+        background-color: unset;
+        font-size: 14px;
+        color: $primary-blue;
+        cursor: pointer;
+        &:hover {
+            font-weight: 700;
+        }
+    }
 }

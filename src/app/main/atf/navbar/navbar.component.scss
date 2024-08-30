@@ -3,20 +3,32 @@
 nav {
     .nav-container {
         @include flex-end;
-        top: 0;
-        padding: $component-padding-small;
+        padding: 0 1.5vw;
         box-sizing: border-box;
         background-color: $bg-white;
         gap: 32px;
         font-family: $font-montserrat;
         font-weight: 400;
         font-size: 18px;
+        height: 100%;
         a {
             text-decoration: none;
             color: $primary-blue;
             &:hover {
                 font-weight: 700;
             }
+        }
+    }
+
+    #german,
+    #english {
+        border: none;
+        background-color: unset;
+        font-size: 14px;
+        color: $primary-blue;
+        cursor: pointer;
+        &:hover {
+            font-weight: 700;
         }
     }
 
@@ -90,17 +102,13 @@ nav {
     }
 }
 
-.d-none {
-    display: none;
-}
-
-@media screen and (min-width: 761px) {
+@media screen and (min-width: 881px) {
     #nav-icon-mobile {
         display: none;
     }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 880px) {
     #nav-icon-mobile {
         display: block;
     }

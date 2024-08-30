@@ -35,8 +35,8 @@ section {
 
 .circle0 {
     @include circle-width-s;
-    top: 40px;
-    right: 80px;
+    top: 3vh;
+    right: 5vw;
 }
 
 .circle1 {
@@ -47,14 +47,17 @@ section {
 
 .circle2 {
     @include circle-width-xs;
-    bottom: 40px;
-    right: 80px;
+    bottom: 5vh;
+    right: 8vw;
 }
 
-@media (max-width: 1130px) {
+@media (max-width: 1315px) {
     .circle1 {
         @include circle-width-s;
     }
+}
+
+@media (max-width: 1130px) {
     .circle2 {
         display: none;
     }
@@ -68,6 +71,9 @@ section {
             width: 100%;
         }
     }
+    .circle1 {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -78,8 +84,5 @@ section {
         @include circle-width-xs;
         top: 2vh;
         right: 2vw;
-    }
-    .circle1 {
-        display: none;
     }
 }

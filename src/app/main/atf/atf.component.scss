@@ -27,7 +27,7 @@
 
 .headlines-container {
     position: absolute;
-    right: 90px;
+    right: 10vw;
     top: 30vh;
     .headlines {
         @include flex-column;
@@ -43,8 +43,8 @@
         h1 {
             font-family: $font-baloo;
             font-weight: 800;
-            font-size: clamp(40px, 7vw, 128px);
-            line-height: clamp(40px, 7vw, 128px);
+            font-size: clamp(40px, 6vw, 128px);
+            line-height: clamp(40px, 6vw, 128px);
             margin: 0;
         }
     }
@@ -59,6 +59,7 @@
     left: 11vw;
     z-index: 200;
     object-fit: contain;
+    pointer-events: none;
 }
 
 .scroll-container {
@@ -131,10 +132,6 @@
 @media screen and (max-width: 450px) {
     .circle {
         top: -5px;
-        left: -350px;
+        left: -300px;
     }
 }
-
-// @media screen and (max-width: 480px) {
-
-// }
