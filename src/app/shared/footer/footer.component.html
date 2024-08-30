@@ -7,16 +7,36 @@
       <span>© Amalia Konstantinidou 2024</span>
     </div>
     <div class="social-buttons">
-      <img src="/assets/img/social-buttons/github-icon.png" alt="github icon" />
-      <img src="/assets/img/social-buttons/mail-icon.png" alt="mail icon" />
-      <img
-        src="/assets/img/social-buttons/linkedin-icon.png"
-        alt="linkedin icon"
-      />
+      <a target="_blank" href="https://github.com/Ama-kon">
+        <img
+          class="github-icon"
+          src="/assets/img/social-buttons/github-icon.png"
+          alt="github icon"
+      /></a>
+      <a href="#app-contact">
+        <img
+          class="mail-icon"
+          src="/assets/img/social-buttons/mail-icon.png"
+          alt="mail icon"
+      /></a>
+
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/in/amalia-konstantinidou-362770251/"
+      >
+        <img
+          class="linkedin-icon"
+          src="/assets/img/social-buttons/linkedin-icon.png"
+          alt="linkedin icon"
+      /></a>
     </div>
   </div>
 
   <div *ngIf="!window.location.href.includes('imprint')" class="legal-notice">
-    <a target="_blank" href="imprint">Legal notice</a>
+    <a
+      [href]="'imprint?lang=' + translateService.currentLang"
+      target="_blank"
+      >{{ "legal-notice" | translate }}</a
+    >
   </div>
 </footer>

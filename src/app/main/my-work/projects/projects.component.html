@@ -13,13 +13,13 @@
     <div class="project-info-container">
       <h3>{{ project.title }}</h3>
       <span class="stacks">{{ project.stack }}</span>
-      <span class="description">{{ project.description }}</span>
+      <span class="description">{{ project.description | translate }}</span>
       <div class="buttons-container">
         <button class="gradient-button">
           <a target="_blank" href="{{ project.github }}">GitHub</a>
         </button>
         <button class="gradient-button">
-          <a href="{{ project.live }}">Live</a>
+          <a target="_blank" href="{{ project.live }}">Live</a>
         </button>
       </div>
     </div>

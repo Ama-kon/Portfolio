@@ -6,16 +6,15 @@
     alt="design circle"
   />
   }
-  <h2>Contact</h2>
+  <h2>{{ "contact" | translate }}</h2>
   <div class="text-form-container">
     <div class="contact-text">
-      <h3>Got a problem to solve?</h3>
-      <span class="contact-me-text"
-        >Feel free to reach out to me through this form. I'm excited to hear
-        from you, learn about your ideas, and contribute to your projects with
-        my skills and dedication.</span
+      <h3>{{ "problem-to-solve" | translate }}</h3>
+      <span class="contact-me-text"> {{ "contact-me-text" | translate }}</span>
+      <span
+        >{{ "need-developer" | translate
+        }}<b>{{ "contact-me!" | translate }}</b></span
       >
-      <span>Need a Frontend developer? <b>Contact me!</b></span>
     </div>
     <div class="contact-form">
       <app-contact-form></app-contact-form>

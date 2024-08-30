@@ -1,8 +1,20 @@
 <div class="mobile-nav-container">
   <div class="links-container">
-    <a (click)="closeMobileNav()" href="#app-about-me">About me</a>
-    <a (click)="closeMobileNav()" href="#app-skill-set">Skill set</a>
-    <a (click)="closeMobileNav()" href="#app-my-work">My work</a>
-    <a (click)="closeMobileNav()" href="#app-contact">Contact</a>
+    <a (click)="closeMobileNav()" href="#app-about-me">{{
+      "about-me" | translate
+    }}</a>
+    <a (click)="closeMobileNav()" href="#app-skill-set">{{
+      "skill-set" | translate
+    }}</a>
+    <a (click)="closeMobileNav()" href="#app-my-work">{{
+      "my-work" | translate
+    }}</a>
+    <a (click)="closeMobileNav()" href="#app-contact">{{
+      "contact" | translate
+    }}</a>
+    <div>
+      <button id="german" (click)="switchLanguage('de')">DE</button> |
+      <button id="english" (click)="switchLanguage('en')">EN</button>
+    </div>
   </div>
 </div>

@@ -8,11 +8,11 @@
   }
   <div class="lets-work">
     <h2>
-      Let's work <br />
-      togheter
+      {{ "lets" | translate }}
+      {{ "work-together" | translate }}
     </h2>
     <div class="i-am-container">
-      <span>I am</span>
+      <span> {{ "i-am" | translate }}</span>
       <div class="i-am-img-container">
         <div class="located-in-container">
           <div class="located-img-container">
@@ -23,7 +23,10 @@
             />
           </div>
 
-          <span>located in <br />Ludwigshafen</span>
+          <span
+            >{{ "located-in" | translate }} <br />
+            Ludwigshafen</span
+          >
         </div>
         <div class="about-me-container">
           <div class="remote-img-container">
@@ -33,9 +36,8 @@
               alt="remote icon"
             />
           </div>
-
-          open to Work <br />
-          remote
+          {{ "open-to-work-1" | translate }} <br />
+          {{ "open-to-work-2" | translate }}
         </div>
       </div>
     </div>
@@ -43,22 +45,17 @@
 
   <div class="about-me">
     <span>
-      Do you want to make a change? Do it!
+      {{ "about-me-text-1" | translate }}
       <br />
-      In line with this motto, I would like to introduce myself to you as a
-      Frontend Developer from Ludwigshafen am Rhein. A structured, clear, and
-      fully functional website is a standard I want to provide to users. For
-      this reason, I am ready to take the next milestone and actively build my
-      career as a Junior Developer in the frontend. I am passionate about
-      delving into code and look forward to identifying and eliminating
-      problems.
+      {{ "about-me-text-2" | translate }}
       <br />
       <br />
-      If you feel that I would be a good fit for you and your team, I look
-      forward to a personal exchange.
+      {{ "about-me-text-3" | translate }}
     </span>
     <div class="button-container">
-      <button class="gradient-button"><a href="#">Send a message</a></button>
+      <button class="gradient-button">
+        <a href="#app-contact">{{ "send-message" | translate }}</a>
+      </button>
     </div>
   </div>
 </section>

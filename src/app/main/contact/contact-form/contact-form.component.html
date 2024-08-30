@@ -1,7 +1,7 @@
 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
   <p>
     <mat-form-field appearance="outline" class="field">
-      <mat-label>Your name</mat-label>
+      <mat-label>{{ "your-name" | translate }}</mat-label>
       <input matInput required formControlName="name" />
       <mat-icon
         matSuffix
@@ -14,8 +14,13 @@
   </p>
   <p>
     <mat-form-field appearance="outline" class="field">
-      <mat-label>Your email</mat-label>
-      <input matInput required formControlName="email" />
+      <mat-label>{{ "your-email" | translate }}</mat-label>
+      <input
+        matInput
+        required
+        formControlName="email"
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+      />
       <mat-icon
         matSuffix
         *ngIf="contactForm.get('email')?.touched"
@@ -27,7 +32,7 @@
   </p>
   <p>
     <mat-form-field appearance="outline" class="field">
-      <mat-label>Your message</mat-label>
+      <mat-label>{{ "your-message" | translate }}</mat-label>
       <textarea matInput required formControlName="message"></textarea>
       <mat-icon
         matSuffix
@@ -40,10 +45,11 @@
   </p>
 
   <mat-checkbox color="primary" formControlName="checkbox">
-    I've read the <a target="_blank" href="imprint">privacy policy</a>and agree
-    to the processing of my data as outlined.
+    {{ "privacy-1" | translate }}
+    <a target="_blank" href="imprint">{{ "link-privacy" | translate }}</a>
+    {{ "privacy-2" | translate }}
     <mat-error *ngIf="submitted && contactForm.get('checkbox')?.value == false">
-      Please accept the privacy policy</mat-error
+      {{ "privacy-error" | translate }}</mat-error
     >
   </mat-checkbox>
 
@@ -52,7 +58,12 @@
       [ngClass]="contactForm.valid ? 'gradient-button' : 'disabled-button'"
       type="submit"
     >
-      <span>Send</span>
+      <span>{{ "send" | translate }}</span>
     </button>
   </div>
 </form>
+
+<div class="success">
+  <span>{{ "successfully" | translate }}</span>
+</div>
+<div class="blur-container"></div>
