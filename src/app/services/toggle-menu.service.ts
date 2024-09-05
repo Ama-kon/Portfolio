@@ -1,4 +1,4 @@
-import { Injectable, Input, Output, EventEmitter } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
@@ -23,8 +23,12 @@ export class ToggleMenuService {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
     if (this.isMobileMenuOpen) {
       document.querySelector('app-mobile-navbar')?.classList.remove('d-none');
+      document.querySelector('.headlines-container')?.classList.add('d-none');
     } else {
       document.querySelector('app-mobile-navbar')?.classList.add('d-none');
+      document
+        .querySelector('.headlines-container')
+        ?.classList.remove('d-none');
     }
   }
 }
