@@ -4,6 +4,7 @@ section {
     padding: $component-padding;
     background: $gradient-white;
     position: relative;
+    overflow: hidden;
     > div {
         @include flex-column;
         gap: $gap-40;
@@ -43,25 +44,27 @@ section {
 }
 
 .circle1 {
-    @include circle-width-m;
-    bottom: 4vh;
-    left: 15vw;
-}
-
-.circle2 {
     @include circle-width-xs;
     bottom: 5vh;
     right: 8vw;
 }
 
-@media (max-width: 1315px) {
-    .circle1 {
-        @include circle-width-s;
+.top-btn {
+    background-image: url("/assets/img/scroll-to-top/top-default.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    transition: background-image 0.3s ease;
+
+    &:hover {
+        background-image: url("/assets/img/scroll-to-top/top-hover.png");
     }
 }
 
 @media (max-width: 1130px) {
-    .circle2 {
+    .circle1 {
         display: none;
     }
 }
@@ -74,9 +77,6 @@ section {
         .contact-form {
             width: 100%;
         }
-    }
-    .circle1 {
-        display: none;
     }
 }
 
