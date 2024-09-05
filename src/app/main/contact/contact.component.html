@@ -1,6 +1,6 @@
 <section>
   <div class="max-width">
-    @for (item of [1,2,3]; track $index) {
+    @for (item of [1,2]; track $index) {
     <img
       class="circle{{ $index }}"
       src="/assets/img/design-only/design-circle.png"
@@ -10,11 +10,20 @@
     <h2>{{ "contact" | translate }}</h2>
     <div class="text-form-container">
       <div class="contact-text">
-        <h3>{{ "problem-to-solve" | translate }}</h3>
+        <h3
+          data-aos="slide-right"
+          data-aos-duration="1000"
+          data-asos-delay="300"
+        >
+          {{ "problem-to-solve" | translate }}
+        </h3>
         <span class="contact-me-text">
           {{ "contact-me-text" | translate }}</span
         >
         <span
+          data-aos="slide-right"
+          data-aos-duration="1000"
+          data-asos-delay="900"
           >{{ "need-developer" | translate
           }}<b>{{ "contact-me!" | translate }}</b></span
         >
@@ -23,5 +32,8 @@
         <app-contact-form></app-contact-form>
       </div>
     </div>
+    <a href="#atf-component">
+      <div class="top-btn" role="img" aria-label="scroll to top button"></div>
+    </a>
   </div>
 </section>
