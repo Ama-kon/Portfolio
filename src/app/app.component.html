@@ -1,4 +1,11 @@
 <div class="x-hidden">
+  <div class="nav-bar-container">
+    <app-navbar
+      class="nav-bar-component max-width"
+      [isMobileMenuOpen]="isMobileMenuOpen"
+      (menuToggled)="onToggled($event)"
+    ></app-navbar>
+  </div>
   <router-outlet />
   <app-footer></app-footer>
 </div>
