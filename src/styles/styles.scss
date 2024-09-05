@@ -1,6 +1,7 @@
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
 @import "./../styles/typography";
 @import "./../styles/mixins";
+@import "aos/dist/aos.css";
 
 $component-padding-small: 50px 100px;
 $component-padding: 80px 100px;
@@ -23,7 +24,6 @@ html,
 body {
   height: 100%;
   scroll-behavior: smooth;
-  scroll-padding-top: 50px;
 }
 body {
   margin: 0;
@@ -35,7 +35,7 @@ body {
 }
 
 .max-width {
-  max-width: 1500px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
