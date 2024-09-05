@@ -34,7 +34,6 @@ form {
     display: none;
     position: absolute;
     width: 100vw;
-    // max-width: 1500px;
     height: 20vh;
     background: azure;
     align-items: center;
@@ -71,5 +70,17 @@ form {
     to {
         opacity: 0;
         transform: translateY(40px);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .success {
+        box-sizing: border-box;
+        position: fixed;
+        width: 85%;
+        top: 33vh;
+        left: 24px;
+        padding: 20px;
+        text-align: center;
     }
 }
