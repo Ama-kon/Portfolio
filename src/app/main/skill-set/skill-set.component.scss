@@ -16,14 +16,14 @@ section {
 h2 {
     @include h2;
     color: white;
-    padding-bottom: 42px;
+    padding-bottom: 72px;
 }
 
 .skill-set-container {
     display: flex;
     flex-wrap: wrap;
-    gap: clamp(50px, 13vw, 88px);
-    width: 65%;
+    gap: clamp(50px, 13vw, 80px);
+    width: 100%;
     justify-content: center;
 
     .img-text-container {

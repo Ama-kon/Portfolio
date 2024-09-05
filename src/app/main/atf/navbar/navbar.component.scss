@@ -1,12 +1,13 @@
 @import "./../../../../styles/styles.scss";
 
 nav {
+    width: 100%;
+    padding: 0 24px;
     > div {
         @include flex-end;
     }
     .nav-container {
-        padding: 0 1.5vw;
-        box-sizing: border-box;
+        display: flex;
         background-color: $bg-white;
         font-family: $font-montserrat;
         font-weight: 400;
@@ -21,6 +22,18 @@ nav {
                 font-weight: 700;
             }
         }
+    }
+
+    .space-between {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo {
+        z-index: 250;
+        @include logo;
+        filter: brightness(8%) saturate(8%) invert(43%) sepia(85%) saturate(2619%) hue-rotate(212deg) brightness(101%)
+            contrast(101%);
     }
 
     #german,
@@ -38,9 +51,6 @@ nav {
     #nav-icon-mobile {
         width: clamp(35px, 9vw, 60px);
         height: 40px;
-        position: relative;
-        right: 6vw;
-        top: 3vh;
         -webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
         -o-transform: rotate(0deg);

@@ -1,17 +1,21 @@
 @import "./../../../styles/styles.scss";
 
+.atf-section {
+    overflow: hidden;
+}
+
 section {
     height: 100vh;
     padding: $component-padding;
     box-sizing: border-box;
     background: $gradient-white;
     position: relative;
+    overflow-y: hidden;
     > div {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 85vw;
+        height: 95vh;
+        position: relative;
+        margin: auto;
+        max-width: 1440px;
     }
 }
 
@@ -19,18 +23,10 @@ section {
     position: absolute;
     top: -3vh;
     left: -15vw;
-    width: clamp(250px, 43vw, 600px);
-    height: clamp(250px, 43vw, 600px);
+    width: clamp(250px, 48vw, 600px);
+    height: clamp(250px, 48vw, 600px);
     z-index: 150;
     pointer-events: none;
-}
-.logo {
-    z-index: 250;
-    display: flex;
-    position: absolute;
-    top: 3vh;
-    left: 0;
-    @include logo;
 }
 
 .headlines-container {
@@ -64,7 +60,6 @@ section {
     max-height: 80%;
     position: absolute;
     bottom: 0;
-    left: 11vw;
     z-index: 200;
     object-fit: contain;
     pointer-events: none;
@@ -103,6 +98,12 @@ section {
 }
 
 @media screen and (max-width: 830px) {
+    .profile-picture {
+        width: unset;
+    }
+}
+
+@media screen and (max-width: 830px) {
     .scroll-container {
         display: none;
     }
@@ -111,6 +112,10 @@ section {
 @media screen and (max-width: 600px) {
     section {
         padding: $component-padding-responsive;
+        // height: 97vh;
+        > div {
+            width: 100%;
+        }
     }
     .logo {
         top: 24px;
@@ -120,7 +125,7 @@ section {
     }
     .circle {
         top: -2vh;
-        left: -50vw;
+        left: -30vw;
         width: 700px;
         height: 700px;
     }
@@ -137,32 +142,6 @@ section {
         left: 0;
         width: 100%;
         max-height: 55%;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .circle {
-        top: 0;
-        left: -55vw;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .circle {
-        top: 0;
-        left: -74vw;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .circle {
-        top: -4vh;
-        left: -100vw;
-    }
-}
-
-@media screen and (max-width: 365px) {
-    .circle {
-        left: -120vw;
+        bottom: -2vh;
     }
 }

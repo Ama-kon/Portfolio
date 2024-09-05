@@ -3,16 +3,15 @@
 main {
     padding: $component-padding;
     background: $bg-white;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-left: 2px solid $primary-blue;
-    border-top: 6px solid $primary-blue;
+    display: flow;
+    height: 100%;
+    z-index: 500;
+    margin-top: 12vh !important;
 }
 
 @media (max-width: 700px) {
     main {
         padding: 20px;
-        border: none;
-        text-align: center;
+        text-align: left;
     }
 }
