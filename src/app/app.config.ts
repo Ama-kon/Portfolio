@@ -3,7 +3,7 @@ import {
   importProvidersFrom,
   APP_INITIALIZER,
 } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient } from '@angular/common/http';
@@ -14,6 +14,7 @@ import {
 } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ViewportScroller } from '@angular/common';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './assets/languages/', '.json');
@@ -21,7 +22,13 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes),
+    provideRouter(
+      routes,
+      withInMemoryScrolling({
+        anchorScrolling: 'enabled',
+        scrollPositionRestoration: 'enabled',
+      })
+    ),
     provideAnimationsAsync(),
     provideHttpClient(),
     importProvidersFrom(
@@ -40,6 +47,14 @@ export const appConfig: ApplicationConfig = {
         return translate.use('en');
       },
       deps: [TranslateService],
+      multi: true,
+    },
+    {
+      provide: APP_INITIALIZER,
+      useFactory: (viewportScroller: ViewportScroller) => () => {
+        viewportScroller.setOffset([0, 50]);
+      },
+      deps: [ViewportScroller],
       multi: true,
     },
   ],
