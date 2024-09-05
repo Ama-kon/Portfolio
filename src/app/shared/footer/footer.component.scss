@@ -15,6 +15,7 @@ footer {
         width: 33%;
         img {
             @include logo;
+            filter: invert(1);
         }
     }
 
@@ -59,7 +60,6 @@ footer {
         gap: 28px;
     }
     .copyright {
-        // text-align: center;
         width: 100% !important;
         margin: 0 auto;
     }
