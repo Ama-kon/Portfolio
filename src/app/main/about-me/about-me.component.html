@@ -2,6 +2,9 @@
   <div class="max-width">
     @for (item of [1,2]; track $index) {
     <img
+      data-aos="zoom-in-left"
+      data-aos-duration="1000"
+      data-aos-delay="300"
       class="circle{{ $index }}"
       src="/assets/img/design-only/design-circle.png"
       alt="design circle"
@@ -14,7 +17,11 @@
       </h2>
       <div class="i-am-container">
         <span> {{ "i-am" | translate }}</span>
-        <div class="i-am-img-container">
+        <div
+          class="i-am-img-container"
+          data-aos="zoom-in-up"
+          data-aos-duration="1000"
+        >
           <div class="located-in-container">
             <div class="located-img-container">
               <img
@@ -30,7 +37,11 @@
             >
           </div>
           <div class="about-me-container">
-            <div class="remote-img-container">
+            <div
+              class="remote-img-container"
+              data-aos="zoom-in-up"
+              data-aos-duration="1000"
+            >
               <img
                 class="remote-img"
                 src="/assets/img/about-me-icons/remote-icon.png"

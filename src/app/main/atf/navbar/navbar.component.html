@@ -1,18 +1,28 @@
 <nav>
-  <div id="nav-desktop" class="nav-container">
-    <a href="#app-about-me">{{ "about-me" | translate }}</a>
-    <a href="#app-skill-set">{{ "skill-set" | translate }}</a>
-    <a href="#app-my-work">{{ "my-work" | translate }}</a>
-    <a href="#app-contact">{{ "contact" | translate }}</a>
-    <div>
-      <button id="german" (click)="switchLanguage('de')">DE</button> |
-      <button id="english" (click)="switchLanguage('en')">EN</button>
+  <div class="space-between">
+    <img
+      data-aos="flip-up"
+      data-aos-duration="1000"
+      data-aos-delay="900"
+      class="logo"
+      src="/assets/img/logo.png"
+      alt="logo"
+    />
+    <div id="nav-desktop" class="nav-container">
+      <a href="#app-about-me">{{ "about-me" | translate }}</a>
+      <a href="#app-skill-set">{{ "skill-set" | translate }}</a>
+      <a href="#app-my-work">{{ "my-work" | translate }}</a>
+      <a href="#app-contact">{{ "contact" | translate }}</a>
+      <div>
+        <button id="german" (click)="switchLanguage('de')">DE</button> |
+        <button id="english" (click)="switchLanguage('en')">EN</button>
+      </div>
     </div>
-  </div>
-  <div id="nav-icon-mobile" (click)="toggleMobile()">
-    <span></span>
-    <span></span>
-    <span></span>
+    <div id="nav-icon-mobile" (click)="toggleMobile()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
   <app-mobile-navbar class="mobile-navbar d-none"></app-mobile-navbar>
 </nav>

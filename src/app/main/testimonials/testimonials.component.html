@@ -5,8 +5,14 @@
       <span> {{ "people-text" | translate }}</span>
     </div>
     <div class="testimonials">
-      @for (testimonial of testimonials; track testimonial) {
-      <div class="single-testimonial">
+      @for (testimonial of testimonials; track testimonial; let i = $index) {
+      <div
+        class="single-testimonial"
+        data-aos="flip-left"
+        data-aos-duration="1500"
+        data-aos-delay="50"
+        data-aos-easing="ease-out-cubic"
+      >
         <div class="name-title-container">
           <span class="name">{{ testimonial.name }}</span>
           <span class="project">{{ testimonial.project | translate }}</span>

@@ -5,10 +5,16 @@
     src="/assets/img/design-only/design-circle.png"
     alt="design circle"
   />
-  } @for (project of projects; track project) {
+  } @for (project of projects; track project; let i = $index) {
   <div class="single-project-container">
     <div class="img-container">
-      <img class="project-img" src=" {{ project.img }}" alt="" />
+      <img
+        data-aos="slide-left"
+        data-aos-duration="600"
+        class="project-img"
+        src=" {{ project.img }}"
+        alt=""
+      />
     </div>
     <div class="project-info-container">
       <h3>{{ project.title }}</h3>

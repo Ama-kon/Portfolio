@@ -2,8 +2,12 @@
   <div class="max-width">
     <h2>{{ "skill-set" | translate }}</h2>
     <div class="skill-set-container">
-      @for(skill of skills; track skill) {
-      <div class="img-text-container">
+      @for(skill of skills; track skill; let i = $index) {
+      <div
+        class="img-text-container"
+        data-aos="fade-up-right"
+        [attr.data-aos-delay]="i * 60"
+      >
         <img
           class="skill-icon"
           src="assets/img/skills-icons/{{ skill }}-icon.png"
