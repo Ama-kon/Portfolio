@@ -35,8 +35,8 @@
 
     <div *ngIf="!window.location.href.includes('imprint')" class="legal-notice">
       <a
-        [href]="'imprint?lang=' + translateService.currentLang"
-        target="_blank"
+        [routerLink]="['/imprint']"
+        [queryParams]="{ lang: translateService.currentLang }"
         >{{ "legal-notice" | translate }}</a
       >
     </div>
