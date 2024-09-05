@@ -16,6 +16,7 @@ export class ImprintComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    window.scrollTo(0, 0);
     this.route.queryParams.subscribe((params) => {
       const lang = params['lang'];
       if (lang) {
