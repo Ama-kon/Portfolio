@@ -1,4 +1,4 @@
-<div class="x-hidden">
+<div class="x-hidden page-container">
   <div class="nav-bar-container">
     <app-navbar
       class="nav-bar-component max-width"
@@ -6,6 +6,8 @@
       (menuToggled)="onToggled($event)"
     ></app-navbar>
   </div>
-  <router-outlet />
+  <div class="main">
+    <router-outlet />
+  </div>
   <app-footer></app-footer>
 </div>
