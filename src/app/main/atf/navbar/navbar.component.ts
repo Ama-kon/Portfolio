@@ -4,6 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MobileNavbarComponent } from '../mobile-navbar/mobile-navbar.component';
 import { ToggleMenuService } from '../../../services/toggle-menu.service';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -13,6 +14,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
     MatButtonModule,
     MobileNavbarComponent,
     TranslateModule,
+    RouterLink,
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',

@@ -8,6 +8,7 @@ import { MyWorkComponent } from './my-work/my-work.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from '../shared/footer/footer.component';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -26,4 +27,15 @@ import { FooterComponent } from '../shared/footer/footer.component';
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',
 })
-export class MainComponent {}
+export class MainComponent implements OnInit {
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.route.fragment.subscribe((fragment) => {
+      if (fragment) {
+        const element = document.getElementById(fragment);
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+}

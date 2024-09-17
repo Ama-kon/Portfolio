@@ -1,15 +1,15 @@
 <div class="mobile-nav-container">
   <div class="links-container">
-    <a (click)="closeMobileNav()" href="#app-about-me">{{
+    <a (click)="closeMobileNav()" [routerLink]="['/']" fragment="about-me">{{
       "about-me" | translate
     }}</a>
-    <a (click)="closeMobileNav()" href="#app-skill-set">{{
+    <a (click)="closeMobileNav()" [routerLink]="['/']" fragment="skillset">{{
       "skill-set" | translate
     }}</a>
-    <a (click)="closeMobileNav()" href="#app-my-work">{{
+    <a (click)="closeMobileNav()" [routerLink]="['/']" fragment="my-work">{{
       "my-work" | translate
     }}</a>
-    <a (click)="closeMobileNav()" href="#app-contact">{{
+    <a (click)="closeMobileNav()" [routerLink]="['/']" fragment="contact">{{
       "contact" | translate
     }}</a>
     <div>

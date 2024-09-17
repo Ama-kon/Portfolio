@@ -2,11 +2,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ToggleMenuService } from '../../../services/toggle-menu.service';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-mobile-navbar',
   standalone: true,
-  imports: [NavbarComponent, TranslateModule],
+  imports: [NavbarComponent, TranslateModule, RouterLink],
   templateUrl: './mobile-navbar.component.html',
   styleUrl: './mobile-navbar.component.scss',
 })

@@ -9,10 +9,15 @@
       alt="logo"
     />
     <div id="nav-desktop" class="nav-container">
-      <a href="#app-about-me">{{ "about-me" | translate }}</a>
-      <a href="#app-skill-set">{{ "skill-set" | translate }}</a>
-      <a href="#app-my-work">{{ "my-work" | translate }}</a>
-      <a href="#app-contact">{{ "contact" | translate }}</a>
+      <a [routerLink]="['/']" fragment="about-me">{{
+        "about-me" | translate
+      }}</a>
+      <a [routerLink]="['/']" fragment="skillset">{{
+        "skill-set" | translate
+      }}</a>
+      <a [routerLink]="['/']" fragment="my-work">{{ "my-work" | translate }}</a>
+      <a [routerLink]="['/']" fragment="contact">{{ "contact" | translate }}</a>
+
       <div>
         <button id="german" (click)="switchLanguage('de')">DE</button> |
         <button id="english" (click)="switchLanguage('en')">EN</button>
