@@ -69,7 +69,7 @@ section {
     @include flex-column;
     position: absolute;
     bottom: 0;
-    left: 60%;
+    left: 50%;
     font-family: $font-montserrat;
     hr {
         width: 2px;
@@ -97,6 +97,21 @@ section {
     }
 }
 
+@media screen and (max-height: 800px) {
+    .social-buttons {
+        flex-direction: row;
+        &:hover {
+            transform: translateY(-15px);
+        }
+    }
+}
+
+@media screen and (max-height: 860px) {
+    .scroll-container {
+        height: 20%;
+    }
+}
+
 @media screen and (max-width: 830px) {
     .profile-picture {
         width: unset;
@@ -112,7 +127,6 @@ section {
 @media screen and (max-width: 600px) {
     section {
         padding: $component-padding-responsive;
-        // height: 97vh;
         > div {
             width: 100%;
         }
