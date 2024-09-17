@@ -52,7 +52,7 @@ export const appConfig: ApplicationConfig = {
     {
       provide: APP_INITIALIZER,
       useFactory: (viewportScroller: ViewportScroller) => () => {
-        viewportScroller.setOffset([0, 50]);
+        viewportScroller.setOffset([0, 55]);
       },
       deps: [ViewportScroller],
       multi: true,
