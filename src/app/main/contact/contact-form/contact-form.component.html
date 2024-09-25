@@ -41,7 +41,11 @@
 
   <mat-checkbox color="primary" formControlName="checkbox">
     {{ "privacy-1" | translate }}
-    <a target="_blank" href="imprint">{{ "link-privacy" | translate }}</a>
+    <a
+      [routerLink]="['/imprint']"
+      [queryParams]="{ lang: translateService.currentLang }"
+      >{{ "legal-notice" | translate }}</a
+    >
     {{ "privacy-2" | translate }}
     <mat-error *ngIf="submitted && contactForm.get('checkbox')?.value == false">
       {{ "privacy-error" | translate }}</mat-error

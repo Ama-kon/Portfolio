@@ -3,6 +3,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterLink } from '@angular/router';
 import {
   FormBuilder,
   FormGroup,
@@ -13,7 +14,7 @@ import {
 import { CommonModule } from '@angular/common';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { HttpClient } from '@angular/common/http';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ValidatorFn, AbstractControl } from '@angular/forms';
 
 @Component({
@@ -29,6 +30,8 @@ import { ValidatorFn, AbstractControl } from '@angular/forms';
     CommonModule,
     MatCheckboxModule,
     TranslateModule,
+    RouterLink,
+    CommonModule,
   ],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',
@@ -37,7 +40,11 @@ export class ContactFormComponent implements OnInit {
   contactForm!: FormGroup;
   submitted: boolean = false;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    public translateService: TranslateService
+  ) {}
+  window = window;
 
   ngOnInit() {
     this.contactForm = this.formBuilder.group({
